@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>欢迎使用简易聊天系统</title>
+</head>
+
+<body style="width:100%;position: absolute; left: 25%;top:25%;">
+    <div id="app" style="width: 50%;height: 50%;text-align: center;">
+        <div>
+            <el-header>简易聊天系统</el-header>
+        <el-form :model="form">
+
+            <el-form-item label="请输入用户名">
+                <el-input v-model="form.name"></el-input>
+            </el-form-item>
+            <el-form-item label="请输入密码">
+                <el-input v-model="form.password" placeholder="请输入密码" type="password"></el-input>
+            </el-form-item>
+            <el-button type="primary" @click="login">登录</el-button>
+            <el-button type="primary" @click="register">注册</el-button>
+        </el-form>
+        <el-footer>@CopyLeft 童帅</el-footer>
+        </div>
+        <div>
+            <el-dialog :title="info.title_info" :visible.sync="info.visible">
+                {{ info.login_register_info }}
+            </el-dialog>
+        </div>
+    </div>
+
+</body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="../js/login_register.js"></script>
+
+</html>

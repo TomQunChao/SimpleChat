@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>:-)</title>
+	<!--import the css file here-->
+	<link rel="stylesheet" href="../css/index.css">
+
+</head>
+
+<body>
+	<div>
+		<!--The header-->
+		<div class="header">
+			<div id="chat-current">
+
+			</div>
+			<div id="video-current"></div>
+		</div>
+		<button id="logout-button">
+			logout
+		</button>
+
+		<div class="bodyer">
+			<div class="left-side">
+				<!--Friend List and serch frame-->
+				<input id="search-bar" type="text">
+				<div id="friend-list">
+					<div class="ts-radio-group" id="ts-radio-group-friend">
+						<div>
+							<input type="radio" name="friend-target" checked>
+							<label>1</label>
+						</div>
+						<div>
+							<input type="radio" name="friend-target">
+							<label>2</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main">
+				<!--Message Window and input fields-->
+				<div id="message-list">
+					<div class="message-card">
+						<div class="message-content">
+							this is a message,a big big message
+						</div>
+						<div class="message-date">
+							2020.4.27
+						</div>
+					</div>
+				</div>
+				<div id="emotion-table">
+
+				</div>
+				<div class="tools-bar">
+					<button class="tool-button" id="open-video-button">video</button>
+					<button class="tool-button" id="send-photo-button">send photo</button>
+					<input type="file" id="image-input" accept="image/jpeg,image/png,image/gif,image/jpg">
+					<button class="tool-button" id="send-emotion-button">emotion</button>
+					<button class="tool-button" id="video-close-button">close</button>
+				</div>
+				<div id="edit-bar">
+					<div id="input-bar" contenteditable="true">input bar</div>
+					<button id="send-text-button">send</button>
+				</div>
+			</div>
+
+			<div class="right-side" id="video-windows">
+				<!--The video window, which can hide when not in use-->
+				<div id="video-target">
+					<video id="video-target-player" autoplay></video>
+
+				</div>
+				<div id="video-self">
+					<video id="video-self-preview" muted autoplay></video>
+				</div>
+
+			</div>
+		</div>
+
+		<div>
+			<!--The footer info-->
+			<div class="footer">@CopyLeft 童帅</div>
+		</div>
+
+	</div>
+</body>
+<!--import the script file here-->
+<script src="../js/util.js"></script>
+<script src="../js/chat.js"></script>
+
+</html>

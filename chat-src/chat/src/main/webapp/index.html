@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="css/index.css">
+	<title>欢迎使用简易聊天系统</title>
+</head>
+<script>
+
+	var username = sessionStorage.getItem("user");
+	var rand = sessionStorage.getItem("rand");
+	//xmlHttp = new XMLHttpRequest();
+	if(!username||!rand){
+		window.location.href="views/login_register.html";
+	}else{
+		window.location.href="views/chat.html";
+	}
+</script>
+</html>
